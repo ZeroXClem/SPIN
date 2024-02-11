@@ -86,7 +86,7 @@ The input data for our code is required to be of the same format where each data
                  {"role": "assistant", "content": <generation>}]
 }
 ```
-🔍 Note: During data generation, the content for rejected response can be empty, as we only uses prompt to generate model responses. 
+🔍 Note: During data generation, the content for generated response can be empty, as we only uses prompt to generate model responses. 
 
 ### Model
 We also provide our model checkpoints at iteration 0,1,2,3 on HuggingFace.
@@ -192,6 +192,7 @@ You might need to change the configuration in `configs/config.yaml`. Here are so
 - `beta`: beta in SPIN.
     - default: 0.1
 
+In our experiments, we do full fine-tuning on a multi-GPU machine with DeepSpeed ZeRO-3 (requires A100 (80GB)).
 
 #### Examples
 ```
